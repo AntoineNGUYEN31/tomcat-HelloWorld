@@ -2,25 +2,19 @@
     pageEncoding="ISO-8859-1"%>
 <html>
 <head>
-<title>Hello World!</title>
+<title>BASE64</title>
 </head>
-<body style="background-color: aquamarine;">
-  <form action="encode" method="post">
-    <p>BASE 64 ENCODING</p>
+<body style="background-image: url('background.jpg');">
+  <form action="process" method="post">
     <p>
-        <input name="input1" value=${preinput1}>
-        <input type="submit" value="Encode">
+        <textarea name="input1" rows="10" cols="50">${preinput1}</textarea>
     </p>
-    <p>Result: </p>
-    <p><input name="res1" value=${res1}></p>
-  </form>
-  <form action="decode" method="post">
-    <p>BASE 64 ENCODING</p>
     <p>
-        <input name="input2" value=${preinput2}>
-        <input type="submit" value="Decode">
+      <input type="submit" name="encode" value="Encode">
+      <input type="submit" name="decode" value="Decode">
     </p>
-    <p>Result: </p>
-    <p><input name="res2" value=${res2}></p>
+    <p>
+      <textarea name="res1"rows="10" cols="50">${res1}</textarea>
+    </p>
   </form>
 </body>
